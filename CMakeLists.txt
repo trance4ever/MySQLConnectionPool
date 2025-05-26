@@ -13,20 +13,21 @@ link_directories(/usr/local/lib)
 
 set(LIB_SRC 
 	src/MySQLConn.cc
+	src/ConnectionPool.cc
 )
 
 add_library(MySQLConnectionPool SHARED ${LIB_SRC})
 
 set(LIB_LIB
     MySQLConnectionPool
- 	libmysqlclient
-	libjsoncpp
+ 	mysqlclient
+	jsoncpp
 )
 
-# 测试聊天客户端模块
-# add_executable(test_client test/test_client.cc)
-# add_dependencies(test_client MySQLConnectionPool)
-# target_link_libraries(test_client ${LIB_LIB})
+# 测试数据库操作
+add_executable(test test/test.cc)
+add_dependencies(test MySQLConnectionPool)
+target_link_libraries(test ${LIB_LIB})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

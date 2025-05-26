@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/trance/MySQLConnectionPool/src/ConnectionPool.cc" "CMakeFiles/MySQLConnectionPool.dir/src/ConnectionPool.cc.o" "gcc" "CMakeFiles/MySQLConnectionPool.dir/src/ConnectionPool.cc.o.d"
-  "/home/trance/MySQLConnectionPool/src/MySQLConn.cc" "CMakeFiles/MySQLConnectionPool.dir/src/MySQLConn.cc.o" "gcc" "CMakeFiles/MySQLConnectionPool.dir/src/MySQLConn.cc.o.d"
+  "/home/trance/MySQLConnectionPool/test/test.cc" "CMakeFiles/test.dir/test/test.cc.o" "gcc" "CMakeFiles/test.dir/test/test.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

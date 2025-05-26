@@ -39,6 +39,9 @@ namespace cnnpool {
     bool MySQLConn::next() {
         if(m_result != nullptr) {
             m_row = mysql_fetch_row(m_result);
+            if(m_row != nullptr) {
+                return true;
+            }
         }
         return false;
     }

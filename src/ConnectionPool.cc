@@ -10,20 +10,20 @@ namespace cnnpool {
     }
 
     bool ConnectionPool::parseConfig() {
-        std::ifstream ifs("dbconfig.json"); 
+        std::ifstream ifs("/home/trance/MySQLConnectionPool/src/dbconfig.json"); 
         Json::Reader rd;
         Json::Value root;
         rd.parse(ifs, root);
         if(root.isObject()) {
             m_ip = root["ip"].asString();
-            m_user = root["user"].asString();
-            m_passwd = root["passwd"].asString();
-            m_dbName = root["dbName"].asString();
             m_port = root["port"].asInt();
-            m_maxSize = root["maxSize"].asInt();
+            m_user = root["userName"].asString();
+            m_passwd = root["password"].asString();
+            m_dbName = root["dbName"].asString();
             m_minSize = root["minSize"].asInt();
-            m_timeout = root["timeout"].asInt();
+            m_maxSize = root["maxSize"].asInt();
             m_maxIdleTime = root["maxIdleTime"].asInt();
+            m_timeout = root["timeout"].asInt();
             return true;
         }
         return false;

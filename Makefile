@@ -132,6 +132,43 @@ MySQLConnectionPool/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySQLConnectionPool.dir/build.make CMakeFiles/MySQLConnectionPool.dir/build
 .PHONY : MySQLConnectionPool/fast
 
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
+src/ConnectionPool.o: src/ConnectionPool.cc.o
+.PHONY : src/ConnectionPool.o
+
+# target to build an object file
+src/ConnectionPool.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySQLConnectionPool.dir/build.make CMakeFiles/MySQLConnectionPool.dir/src/ConnectionPool.cc.o
+.PHONY : src/ConnectionPool.cc.o
+
+src/ConnectionPool.i: src/ConnectionPool.cc.i
+.PHONY : src/ConnectionPool.i
+
+# target to preprocess a source file
+src/ConnectionPool.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySQLConnectionPool.dir/build.make CMakeFiles/MySQLConnectionPool.dir/src/ConnectionPool.cc.i
+.PHONY : src/ConnectionPool.cc.i
+
+src/ConnectionPool.s: src/ConnectionPool.cc.s
+.PHONY : src/ConnectionPool.s
+
+# target to generate assembly for a file
+src/ConnectionPool.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySQLConnectionPool.dir/build.make CMakeFiles/MySQLConnectionPool.dir/src/ConnectionPool.cc.s
+.PHONY : src/ConnectionPool.cc.s
+
 src/MySQLConn.o: src/MySQLConn.cc.o
 .PHONY : src/MySQLConn.o
 
@@ -156,6 +193,30 @@ src/MySQLConn.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MySQLConnectionPool.dir/build.make CMakeFiles/MySQLConnectionPool.dir/src/MySQLConn.cc.s
 .PHONY : src/MySQLConn.cc.s
 
+test/test.o: test/test.cc.o
+.PHONY : test/test.o
+
+# target to build an object file
+test/test.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cc.o
+.PHONY : test/test.cc.o
+
+test/test.i: test/test.cc.i
+.PHONY : test/test.i
+
+# target to preprocess a source file
+test/test.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cc.i
+.PHONY : test/test.cc.i
+
+test/test.s: test/test.cc.s
+.PHONY : test/test.s
+
+# target to generate assembly for a file
+test/test.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cc.s
+.PHONY : test/test.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,9 +226,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MySQLConnectionPool"
+	@echo "... test"
+	@echo "... src/ConnectionPool.o"
+	@echo "... src/ConnectionPool.i"
+	@echo "... src/ConnectionPool.s"
 	@echo "... src/MySQLConn.o"
 	@echo "... src/MySQLConn.i"
 	@echo "... src/MySQLConn.s"
+	@echo "... test/test.o"
+	@echo "... test/test.i"
+	@echo "... test/test.s"
 .PHONY : help
 
 

@@ -1,3 +1,4 @@
 /home/trance/MySQLConnectionPool/CMakeFiles/MySQLConnectionPool.dir
+/home/trance/MySQLConnectionPool/CMakeFiles/test.dir
 /home/trance/MySQLConnectionPool/CMakeFiles/edit_cache.dir
 /home/trance/MySQLConnectionPool/CMakeFiles/rebuild_cache.dir

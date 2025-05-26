@@ -1,0 +1,1 @@
+/usr/bin/c++  -rdynamic -O0 -ggdb -std=c++14 -Wall -Wno-deprecated -Wno-unused-function -Wno-builtin-macro-redefined CMakeFiles/test.dir/test/test.cc.o -o bin/test   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:/home/trance/MySQLConnectionPool/lib lib/libMySQLConnectionPool.so -lmysqlclient -ljsoncpp 

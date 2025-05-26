@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC  -rdynamic -O0 -ggdb -std=c++14 -Wall -Wno-deprecated -Wno-unused-function -Wno-builtin-macro-redefined -shared -Wl,-soname,libMySQLConnectionPool.so -o lib/libMySQLConnectionPool.so CMakeFiles/MySQLConnectionPool.dir/src/MySQLConn.cc.o 
+/usr/bin/c++ -fPIC  -rdynamic -O0 -ggdb -std=c++14 -Wall -Wno-deprecated -Wno-unused-function -Wno-builtin-macro-redefined -shared -Wl,-soname,libMySQLConnectionPool.so -o lib/libMySQLConnectionPool.so CMakeFiles/MySQLConnectionPool.dir/src/MySQLConn.cc.o   -L/usr/local/lib 

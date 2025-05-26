@@ -71,4 +71,14 @@ namespace cnnpool {
         m_result = nullptr;
         }
     }
+
+    void MySQLConn::refreshAliveTime() {
+        m_aliveTime = std::chrono::steady_clock::now();
+    }
+
+    long long MySQLConn::getAliveTime() {
+        std::chrono::nanoseconds duration = std::chrono::steady_clock::now() - m_aliveTime;
+        std::chrono::milliseconds ms = std::chrono::duration_cast<std::chrono::milliseconds>(duration);
+        return ms.count();
+    }
 }

@@ -6,8 +6,10 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -ggdb -std=c++14 -Wall -Wno-de
 
 include_directories(.)
 include_directories(/usr/include)
+include_directories(/usr/local/include)
 
 link_directories(/usr/lib/x86_64-linux-gnu)
+link_directories(/usr/local/lib)
 
 set(LIB_SRC 
 	src/MySQLConn.cc
@@ -18,6 +20,7 @@ add_library(MySQLConnectionPool SHARED ${LIB_SRC})
 set(LIB_LIB
     MySQLConnectionPool
  	libmysqlclient
+	libjsoncpp
 )
 
 # 测试聊天客户端模块
